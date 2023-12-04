@@ -21,7 +21,7 @@ with open(file_path, 'r') as f:
 for line in lines:
     print(f'Line: {line}')
     left = 0
-    digits = '0'
+    digits = ''
     while left < len(line):
         if line[left].isdigit():
             digits += line[left]
@@ -33,10 +33,10 @@ for line in lines:
                     digits+= words_to_digits[input]
                 right += 1
         print(f'Digits: {digits}')
-        if len(digits) < 2:
+        if len(digits) < 1:
             final = 0
         else:
-            final = digits[1] + digits[-1]
+            final = digits[0] + digits[-1]
         print(f'Final: {final}')
         left += 1
     sum += int(final)  
