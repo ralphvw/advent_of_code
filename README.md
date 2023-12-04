@@ -1,7 +1,3 @@
-Absolutely! Here's a concise README template for your Advent of Code 2023 solutions repository:
-
----
-
 # Advent of Code 2023 Solutions
 
 This repository contains my solutions to the Advent of Code 2023 challenges.
