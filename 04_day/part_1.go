@@ -22,21 +22,17 @@ func main() {
 
 	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Println(fmt.Sprintf("Line: %v", line))
 		result := strings.Split(line, "|")
 		winningNumbers := strings.Split(result[0], ":")
 		winningNumbersArray := strings.Split(winningNumbers[1], " ")
 		actualNumbers := result[1]
 		actualNumbersArray := strings.Split(actualNumbers, " ")
-		fmt.Println(fmt.Sprintf("Winning numbers: %v", winningNumbersArray))
-		fmt.Println(fmt.Sprintf("Actual numbers: %v", actualNumbersArray))
 		currentSum := 0
 		winningSet := map[string]struct{}{}
 		for _, v := range winningNumbersArray {
 			winningSet[v] = struct{}{}
 		}
 		for _, v := range actualNumbersArray {
-			fmt.Println(currentSum)
 			if v == "" {
 				continue
 			}
